@@ -139,8 +139,6 @@
 							</li>
                             <li class="{{ Request::segment(1) == 'contact' ? 'active' : '' }}"><a href="{{ route('e.contact') }}">Contact Us </a>
 							</li>
-                                    <li><a href="">Blog</a></li>
-
 						</ul>
 						<div class="nav-social-link">
                             <a href="https://www.facebook.com/Muhd.Halal/" target="_blank" class="btn-link"><i class="fa fa-facebook"></i></a>
