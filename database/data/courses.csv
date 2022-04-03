@@ -1,0 +1,35 @@
+"id","user_id","category_id","level_id","title","slug","description","image","video","price","duration","status","created_at","updated_at"
+"1","2","1","1","HyperText Markup Language","hypertext-markup-language-h39ElnAznp","<p><strong>What is HTML?</strong></p>
+
+<p>Okay, so this is the only bit of mandatory theory. In order to begin to write HTML, it helps if you know what you are writing.</p>
+
+<p>HTML is the&nbsp;<strong>language in which most websites are written</strong>. HTML is used to create pages and make them functional.</p>
+
+<p>The code used to make them visually appealing is known as CSS and we shall focus on this in a later tutorial. For now, we will focus on&nbsp;<strong>teaching you how to build rather than design</strong>.</p>","1648906452.png","https://www.hyfalyq.co","0","10","Active","2022-04-02 13:34:12","2022-04-02 13:34:12"
+"2","2","1","1","Javascript","javascript-JcuVaFvUD9","<p><a href=""https://developer.mozilla.org/en-US/docs/Glossary/JavaScript"">JavaScript</a>&nbsp;is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else.</p>
+
+<p>JavaScript is a scripting or programming language that allows you to implement complex features on web pages. Every time a web page does more than just sit there and display static information for you to look at displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes. JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (<a href=""https://developer.mozilla.org/en-US/docs/Learn/HTML"">HTML</a>&nbsp;and&nbsp;<a href=""https://developer.mozilla.org/en-US/docs/Learn/CSS"">CSS</a>) we have covered in much more detail in other parts of the Learning Area.</p>","1648906878.png","https://www.hyfalyq.co","0","50","Active","2022-04-02 13:41:18","2022-04-02 13:41:18"
+"3","2","1","1","Hypertext Preprocessor","hypertext-preprocessor-9GmkPrUlP5","<p>PHP started out as a small open-source project that evolved as more and more people found out how useful it was. Rasmus Lerdorf unleashed the first version of PHP way back in 1994.</p>
+
+<ul>
+	<li>&Oslash;PHP is a recursive acronym for &quot;PHP: Hypertext Preprocessor&quot;.</li>
+	<li>&Oslash;PHP is a server-side scripting language that is embedded in HTML. It is used to manage dynamic content, databases, session tracking, even build entire e-commerce sites.</li>
+	<li>&Oslash;It is integrated with several popular databases, including MySQL, PostgreSQL, Oracle, Sybase, Informix, and Microsoft SQL Server.</li>
+</ul>","1648907011.png","https://www.hyfalyq.co","0","30","Active","2022-04-02 13:43:31","2022-04-02 13:43:31"
+"4","2","2","1","Cascading Style Sheets","cascading-style-sheets-qOushOtiFu","<p>CSS (Cascading Style Sheets) is used to style and lay out web pages. For example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features.</p>
+
+<p>CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p>
+
+<p>HTML was NEVER intended to contain tags for formatting a web page!</p>
+
+<p>HTML was created to describe the content of a web page, like:</p>
+
+<p>&lt;h1&gt;This is a heading&lt;/h1&gt;</p>
+
+<p>&lt;p&gt;This is a paragraph.&lt;/p&gt;</p>
+
+<p>When tags like &lt;font&gt;, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.</p>
+
+<p>To solve this problem, the World Wide Web Consortium (W3C) created CSS.</p>
+
+<p>CSS removed the style formatting from the HTML page!</p>","1648907170.png","https://www.hyfalyq.co","0","30","Active","2022-04-02 13:45:42","2022-04-02 13:46:51"
