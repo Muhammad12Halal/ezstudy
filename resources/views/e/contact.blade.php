@@ -64,6 +64,7 @@
                             <p>Fill this form if you have any questions and problems:</p>
                         </div>
                         <div class="row placeani">
+                            @if (auth()->user() != null)
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <div class="input-group">
@@ -92,6 +93,12 @@
                             <div class="col-lg-12">
                                 <button name="submit" id="submit" type="submit" value="Submit" class="btn button-md"> Send Message</button>
                             </div>
+                            @endif
+                            @if (auth()->user() == null)
+                                <div class="col-lg-12">
+                                    <h3>Please Login For Contact</h3>
+                                </div>
+                            @endif
                         </div>
                     </form>
                 </div>
