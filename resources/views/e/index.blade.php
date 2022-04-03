@@ -11,7 +11,7 @@
         <div class="rev-slider">
 			<div id="rev_slider_486_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="news-gallery36" data-source="gallery" style="margin:0px auto;background-color:#ffffff;padding:0px;margin-top:0px;margin-bottom:0px;">
 				<!-- START REVOLUTION SLIDER 5.3.0.2 fullwidth mode -->
-				<div id="rev_slider_486_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.0.2">
+                <div id="rev_slider_486_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.0.2">
 					<ul>	<!-- SLIDE  -->
 						<li data-index="rs-100"
 						data-transition="parallaxvertical"
@@ -35,7 +35,7 @@
 						data-param9="" data-param10=""
 						data-description="Science says that Women are generally happier">
 							<!-- MAIN IMAGE -->
-							<img src="assets/images/slider/slide1.jpg" alt=""
+							<img src="{{ asset('efront/OnlineInstruction.gif') }}" alt=""
 								data-bgposition="center center"
 								data-bgfit="cover"
 								data-bgrepeat="no-repeat"
@@ -83,7 +83,7 @@
 								data-paddingbottom="[10,10,10,10]"
 								data-paddingleft="[0,0,0,0]"
 								style="z-index: 6; font-family:rubik; font-weight:700; text-align:center; white-space: normal;">
-									Welcome To University
+									Welcome to EZ STUDY A++
 							</div>
 
 							<!-- LAYER NR. 3 -->
@@ -105,7 +105,7 @@
 								data-paddingbottom="[0,0,0,0]"
 								data-paddingleft="[0,0,0,0]"
 								style="z-index: 7; white-space: nowrap; color:#fff; font-family:rubik; font-size:18px; font-weight:400;">
-									Batter Education For A Better
+									Hello Students
 							</div>
 
 							<!-- LAYER NR. 3 -->
@@ -127,7 +127,7 @@
 								data-paddingbottom="[0,0,0,0]"
 								data-paddingleft="[0,0,0,0]"
 								style="z-index: 7; text-transform:capitalize; white-space: unset; color:#fff; font-family:rubik; font-size:18px; line-height:28px; font-weight:400;">
-									 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+								This website is for Science Computer Student in Universiti Pendidikan Sultan Idris
 							</div>
 							<!-- LAYER NR. 4 -->
 							<div class="tp-caption Newspaper-Button rev-btn "
@@ -148,7 +148,7 @@
 								data-paddingright="[30,35,35,15]"
 								data-paddingbottom="[12,12,12,12]"
 								data-paddingleft="[30,35,35,15]"
-								style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; background-color:var(--primary) !important; border:0; border-radius:30px; margin-right:5px;">READ MORE </div>
+								style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; background-color:var(--primary) !important; border:0; border-radius:30px; margin-right:5px;"><a href="about-2.html" style="color: #fff;">ABOUT US</a></div>
 							<div class="tp-caption Newspaper-Button rev-btn"
 								id="slide-100-layer-6"
 								data-x="['center','center','center','center']"
@@ -167,7 +167,7 @@
 								data-paddingright="[30,35,35,15]"
 								data-paddingbottom="[12,12,12,12]"
 								data-paddingleft="[30,35,35,15]"
-								style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; border-radius:30px;">CONTACT US</div>
+								style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; border-radius:30px;"><a href="contact-1.html">CONTACT US</a></div>
 						</li>
 						<li data-index="rs-200"
 						data-transition="parallaxvertical"
@@ -191,7 +191,7 @@
 						data-param9="" data-param10=""
 						data-description="Science says that Women are generally happier">
 							<!-- MAIN IMAGE -->
-							<img src="assets/images/slider/slide2.jpg" alt=""
+							<img src="{{ asset('efront/OnlineInstruction.gif') }}" alt=""
 								data-bgposition="center center"
 								data-bgfit="cover"
 								data-bgrepeat="no-repeat"
@@ -241,7 +241,7 @@
 								data-paddingbottom="[10,10,10,10]"
 								data-paddingleft="[0,0,0,0]"
 								style="z-index: 6; font-family:rubik; font-weight:700; text-align:center; white-space: normal;text-transform:uppercase;">
-									Welcome To University
+									Education Learning Website
 							</div>
 
 							<!-- LAYER NR. 3 -->
@@ -285,7 +285,7 @@
 								data-paddingbottom="[0,0,0,0]"
 								data-paddingleft="[0,0,0,0]"
 								style="z-index: 7; text-transform:capitalize; white-space: unset; color:#fff; font-family:rubik; font-size:18px; line-height:28px; font-weight:400;">
-									 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+									EZ Study A++ is learning material website for students Science Computer
 							</div>
 							<!-- LAYER NR. 4 -->
 							<div class="tp-caption Newspaper-Button rev-btn "
@@ -306,7 +306,7 @@
 								data-paddingright="[30,35,35,15]"
 								data-paddingbottom="[12,12,12,12]"
 								data-paddingleft="[30,35,35,15]"
-								style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; background-color:var(--primary) !important; border:0; border-radius:30px; margin-right:5px;">READ MORE </div>
+								style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; background-color:var(--primary) !important; border:0; border-radius:30px; margin-right:5px;"><a href="about-2.html" style="color: #fff;">ABOUT US</a></div>
 							<div class="tp-caption Newspaper-Button rev-btn"
 								id="slide-200-layer-6"
 								data-x="['center','center','center','center']"
@@ -325,7 +325,7 @@
 								data-paddingright="[30,35,35,15]"
 								data-paddingbottom="[12,12,12,12]"
 								data-paddingleft="[30,35,35,15]"
-								style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; border-radius:30px;">CONTACT US</div>
+								style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; border-radius:30px;"><a href="contact-1.html">CONTACT US</a></div>
 						</li>
 						<!-- SLIDE  -->
 					</ul>
@@ -342,42 +342,42 @@
 						<div class="col-lg-4 col-md-4 col-sm-6">
 							<div class="service-bx">
 								<div class="action-box">
-									<img src="assets/images/our-services/pic1.jpg" alt="">
+									<img src="{{ asset('efront/tutor.png') }}"alt="">
 								</div>
 								<div class="info-bx text-center">
 									<div class="feature-box-sm radius bg-white">
 										<i class="fa fa-bank text-primary"></i>
 									</div>
-									<h4><a href="#">Best Industry Leaders</a></h4>
-									<a href="#" class="btn radius-xl">View More</a>
+									<h4>Best Tutor</h4>
+									<p>Every learning session is conduct by the experience senior in Universiti Pendidikan Sultan Idris</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-6">
 							<div class="service-bx">
 								<div class="action-box">
-									<img src="assets/images/our-services/pic2.jpg" alt="">
+									<img src="{{ asset('efront/education.png') }}" alt="">
 								</div>
 								<div class="info-bx text-center">
 									<div class="feature-box-sm radius bg-white">
 										<i class="fa fa-book text-primary"></i>
 									</div>
-									<h4><a href="#">Learn Courses Online</a></h4>
-									<a href="#" class="btn radius-xl">View More</a>
+									<h4><a href="#">Best Courses </a></h4>
+									<p>Every courses will start with basic learning for students learn from zero to hero</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12">
 							<div class="service-bx m-b0">
 								<div class="action-box">
-									<img src="assets/images/our-services/pic3.jpg" alt="">
+									<img src="{{ asset('efront/upsi.png') }}" alt="">
 								</div>
 								<div class="info-bx text-center">
 									<div class="feature-box-sm radius bg-white">
 										<i class="fa fa-file-text-o text-primary"></i>
 									</div>
-									<h4><a href="#">Book Library & Store</a></h4>
-									<a href="#" class="btn radius-xl">View More</a>
+									<h4>Best Education</h4>
+                                    <p>Universiti Pendidikan Sultan Idris is one of the best Education University in Malaysia.</p>
 								</div>
 							</div>
 						</div>
@@ -392,7 +392,7 @@
 					<div class="row">
 						<div class="col-md-12 heading-bx left">
 							<h2 class="title-head">Popular <span>Courses</span></h2>
-							<p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+							<p>This is popular course in our education learning website</p>
 						</div>
 					</div>
 					<div class="row">
@@ -492,7 +492,7 @@
 			<!-- Popular Courses END -->
 
 			<!-- Form -->
-			<div class="section-area section-sp1 ovpr-dark bg-fix online-cours" style="background-image:url(assets/images/background/bg1.jpg);">
+			<div class="section-area section-sp1 ovpr-dark bg-fix online-cours" style="background-image:url({{ asset('efront/bg3.jpg') }});">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12 text-center text-white">
@@ -598,7 +598,7 @@
 			</div>
 
 			<!-- Testimonials -->
-			<div class="section-area section-sp2 bg-fix ovbl-dark" style="background-image:url(assets/images/background/bg1.jpg);">
+			<div class="section-area section-sp2 bg-fix ovbl-dark" style="background-image:url({{ asset('efront/bg3.jpg') }});">
                 <div class="container">
 					<div class="row">
 						<div class="col-md-12 text-white heading-bx left">
@@ -647,8 +647,8 @@
 								</div>
 								<div class="info-bx">
 									<ul class="media-post">
-										<li><a href="#"><i class="fa fa-calendar"></i>Jan 02 2019</a></li>
-										<li><a href="#"><i class="fa fa-user"></i>By William</a></li>
+										<li><a href="#"><i class="fa fa-calendar"></i> Jan 02 2019</a></li>
+										<li><a href="#"><i class="fa fa-user"></i> By William</a></li>
 									</ul>
 									<h5 class="post-title"><a href="blog-details.html">This Story Behind Education Will Haunt You Forever.</a></h5>
 									<p>Knowing that, you’ve optimised your pages countless amount of times, written tons.</p>

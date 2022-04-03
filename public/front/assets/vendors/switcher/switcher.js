@@ -1,14 +1,14 @@
 function addSwitcher()
 {
-	var dzSwitcher = '<div class="styleswitcher-right"> <div class="switcher-btn-bx"> <a class="switch-btn"> <span class="fa fa-cog"></span> </a> </div><div class="styleswitcher-inner"> <h6 class="switcher-title">Color Skin</h6> <ul class="color-skins"> <li><a class="theme-skin skin-1" href="?theme=css/skin/skin-1" title=""></a></li><li><a class="theme-skin skin-2" href="?theme=css/skin/skin-2" title=""></a></li><li><a class="theme-skin skin-3" href="?theme=css/skin/skin-3" title=""></a></li><li><a class="theme-skin skin-4" href="?theme=css/skin/skin-4" title=""></a></li></ul> </div></div>';
-	
+	var dzSwitcher = '<div class="styleswitcher-right"> <div class="switcher-btn-bx"> <a class="switch-btn"> <span class="fa fa-cog"></span> </a> </div><div class="styleswitcher-inner"> <h6 class="switcher-title">Color Skin</h6> <ul class="color-skins"> <li><a class="theme-skin skin-1" href="?theme=css/skin/skin-1" title=""></a></li><li><a class="theme-skin skin-2" href="?theme=css/skin/skin-2" title=""></a></li></ul> </div></div>';
+
 	if($("#dzSwitcher").length == 0) {
 		jQuery('body').append(dzSwitcher);
 	}
 }
 
 jQuery(window).on('load',function(){
-	
+
 	//=== Switcher panal slide function	=====================//
 	jQuery('.styleswitcher').animate({
 		'left': '-220px'
@@ -19,15 +19,15 @@ jQuery(window).on('load',function(){
 	});
 	jQuery('.switch-btn').addClass('closed');
 	//=== Switcher panal slide function END	=====================//
-	
+
 });
-	
-$(function(){		
+
+$(function(){
 	"use strict";
-	
+
 	addSwitcher();
 	//=== Switcher panal slide function	=====================//
-	jQuery('.switch-btn').on('click',function () {	
+	jQuery('.switch-btn').on('click',function () {
 		if (jQuery(this).hasClass('open')) {
 			jQuery(this).addClass('closed');
 			jQuery(this).removeClass('open');
@@ -50,7 +50,7 @@ $(function(){
 				'left': 'auto'
 			});
 			}
-		}	
+		}
 	});
 	//=== Switcher panal slide function END	=====================//
 
@@ -58,38 +58,24 @@ $(function(){
     // Color changer
     jQuery(".skin-1").on('click',function(){
         jQuery(".skin").attr("href", "assets/css/color/color-1.css");
-		jQuery(".menu-logo img").attr("src", "assets/images/logo.png");
-		jQuery(".header-transparent .menu-logo img").attr("src", "assets/images/logo-white.png");
-		jQuery(".pt-logo img").attr("src", "assets/images/logo-white.png");
+		jQuery(".menu-logo img").attr("src", "assets/images/STUDYA++.png");
+		jQuery(".header-transparent .menu-logo img").attr("src", "assets/images/STUDYA++.png");
+		jQuery(".pt-logo img").attr("src", "assets/images/halal/Logo3.png");
         return false;
     });
     jQuery(".skin-2").on('click',function(){
         jQuery(".skin").attr("href", "assets/css/color/color-2.css");
-		jQuery(".menu-logo img").attr("src", "assets/images/logo-2.png");
-		jQuery(".header-transparent .menu-logo img").attr("src", "assets/images/logo-white-2.png");
-		jQuery(".pt-logo img").attr("src", "assets/images/logo-white-2.png");
+		jQuery(".menu-logo img").attr("src", "assets/images/STUDYA++.png");
+		jQuery(".header-transparent .menu-logo img").attr("src", "assets/images/STUDYA++.png");
+		jQuery(".pt-logo img").attr("src", "assets/images/halal/Logo3.png");
         return false;
     });
-    jQuery(".skin-3").on('click',function(){
-        jQuery(".skin").attr("href", "assets/css/color/color-3.css");
-		jQuery(".menu-logo img").attr("src", "assets/images/logo-3.png");
-		jQuery(".header-transparent .menu-logo img").attr("src", "assets/images/logo-white-3.png");
-		jQuery(".pt-logo img").attr("src", "assets/images/logo-white-3.png");
-        return false;
-    });
-	jQuery(".skin-4").on('click',function(){
-        jQuery(".skin").attr("href", "assets/css/color/color-4.css");
-		jQuery(".menu-logo img").attr("src", "assets/images/logo-4.png");
-		jQuery(".header-transparent .menu-logo img").attr("src", "assets/images/logo-white-4.png");
-		jQuery(".pt-logo img").attr("src", "assets/images/logo-white-4.png");
-        return false;
-    });
-	//=== Color css change function	=====================//	
-	
+	//=== Color css change function	=====================//
+
 });
 
 /* Theme Panel Save */
-	
+
 	/*var themeOption = [{'layout':[{'wide','boxed',}],'theme','header','bgcolor','bgpatten'}];*/
 	var themeOption = ['themeStandardColor','themeFullColor','layout','header','bgColor',,'bgImage','bgPatten'];
 	themeOption['layout'] = ['wide','boxed','frame','frame_value','layout_value'];
@@ -125,8 +111,8 @@ jQuery(document).ready(function(){
 			}
 			setCookie(optionData+'_value',optionValue,1);
 	});
-	
-	
+
+
 	setThemePanel();
 	//deleteAllCookie();
 	//alert(document.cookie);
@@ -145,8 +131,8 @@ jQuery(document).ready(function(){
 	var json_str = getCookie('mycookie');
 	var arr = JSON.parse(json_str);
 	*/
-	
-	
+
+
 });
 
 function themeFramePadding(){
@@ -154,7 +140,7 @@ function themeFramePadding(){
 	if(themeOptionFrameValue == ''){
 		themeOptionFrameValue = 20;
 	}
-	
+
 	$("#slider-range-3").unbind().slider({
 			min: 20,
 			max: 80,
@@ -194,12 +180,12 @@ function setThemePanel(){
 						jQuery('#FramePadding').val(themeOptionFrameValue+"px");
 						jQuery("#bg").css('padding',themeOptionFrameValue+"px");
 					}else{
-						jQuery("body").addClass(themeOptionItemValue);	
+						jQuery("body").addClass(themeOptionItemValue);
 					}
 				}else if(themeOptionItem == 'header'){
 					jQuery('.'+themeOptionItem+'-view li').removeClass('active');
 					if( themeOptionItemValue == 'sticky-header'){
-						jQuery('.'+themeOptionItem+'-view').find('.header-fixed').addClass('active');	
+						jQuery('.'+themeOptionItem+'-view').find('.header-fixed').addClass('active');
 					}else if( themeOptionItemValue == 'sticky-no'){
 						jQuery('.'+themeOptionItem+'-view').find('.header-static').addClass('active');
 					}

@@ -7,10 +7,11 @@
 @section('content')
 <div class="page-content bg-white">
     <!-- inner page banner -->
-    <div class="page-banner ovbl-dark" style="background-image:url(assets/images/banner/banner2.jpg);">
+    <div class="page-banner ovbl-dark" style="background-image:url({{ asset('efront/event.gif') }});">
         <div class="container">
             <div class="page-banner-entry">
                 <h1 class="text-white">Events</h1>
+                <p class="text-white">Here you can see upcoming and recent events </p>
              </div>
         </div>
     </div>
@@ -18,7 +19,7 @@
     <div class="breadcrumb-row">
         <div class="container">
             <ul class="list-inline">
-                <li><a href="#">Home</a></li>
+                <li><a href="{{ route('e.index') }}">Home</a></li>
                 <li>Events</li>
             </ul>
         </div>
