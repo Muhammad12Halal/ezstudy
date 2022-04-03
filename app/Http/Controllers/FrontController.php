@@ -53,4 +53,19 @@ class FrontController extends Controller
         $events = Event::get();
         return view('e.event', compact('events'));
     }
+
+    public function faq()
+    {
+        return view('e.faq');
+    }
+
+    public function about()
+    {
+        return view('e.about');
+    }
+
+    public function contact()
+    {
+        return view('e.contact');
+    }
 }

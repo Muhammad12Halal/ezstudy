@@ -65,7 +65,7 @@
 				<div class="row d-flex justify-content-between">
 					<div class="topbar-left">
                         <ul>
-							<li><a href="faq.html"><i class="fa fa-question-circle"></i>Ask a Question</a></li>
+							<li><a href="{{ route('e.faq') }}"><i class="fa fa-question-circle"></i>Ask a Question</a></li>
 							<li><a href="mailto:e026687@siswa.upsi.edu.my"><i class="fa fa-envelope-o"></i>e026687@siswa.upsi.edu.my</a></li>
 						</ul>
 					</div>
@@ -74,6 +74,10 @@
 							@if (Auth::user() == NULL)
                                 <li><a href="{{ route('login') }}">Login</a></li>
                                 <li><a href="{{ route('register') }}">Register</a></li>
+                            @endif
+                            @if (Auth::user() != NULL)
+                                <li class=""><a href="{{ route('home') }}">Dashboard </a>
+                                </li>
                             @endif
 						</ul>
 					</div>
@@ -85,7 +89,7 @@
                 <div class="container clearfix">
 					<!-- Header Logo ==== -->
 					<div class="menu-logo">
-						<a href="index.html"><img src="{{ asset('efront/STUDylight.png') }}" alt=""></a>
+						<a href="{{ route('e.index') }}"><img src="{{ asset('efront/STUDylight.png') }}" alt=""></a>
 					</div>
 					<!-- Mobile Nav Button ==== -->
                     <button class="navbar-toggler collapsed menuicon justify-content-end" type="button" data-toggle="collapse" data-target="#menuDropdown" aria-controls="menuDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -101,7 +105,7 @@
 								<li><a href="https://www.instagram.com/muhdhalal14/" target="_blank" class="btn-link"><i class="fa fa-instagram"></i></a></li>
 								<li><a href="https://twitter.com/?lang=en" target="_blank" class="btn-link"><i class="fa fa-twitter"></i></a></li>
 								<!-- Search Button ==== -->
-								<li class="search-btn"><button id="quik-search-btn" type="button" class="btn-link"><i class="fa fa-search"></i></button></li>
+								{{-- <li class="search-btn"><button id="quik-search-btn" type="button" class="btn-link"><i class="fa fa-search"></i></button></li> --}}
 							</ul>
 						</div>
                     </div>
@@ -125,22 +129,14 @@
 							</li>
                             <li class="{{ Request::segment(1) == 'eventDetails' ? 'active' : '' }}"><a href="{{ route('e.event') }}">Event </a>
 							</li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="event.html">Events</a></li>
-                                    <li><a href="faq.html">FAQ's</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                            <li class="{{ Request::segment(1) == 'faq' ? 'active' : '' }}"><a href="{{ route('e.faq') }}">FAQ </a>
+							</li>
+                            <li class="{{ Request::segment(1) == 'faq' ? 'active' : '' }}"><a href="{{ route('e.about') }}">About </a>
+							</li>
+                            <li class="{{ Request::segment(1) == 'contact' ? 'active' : '' }}"><a href="{{ route('e.contact') }}">Contact Us </a>
+							</li>
+                                    <li><a href="">Blog</a></li>
 
-                            @if (Auth::user() == NULL)
-                                <li><a href="{{ route('login') }}">Login </a>
-                                </li>
-                                <li><a href="{{ route('register') }}">Register </a>
-                                </li>
-                            @endif
-                            @if (Auth::user() != NULL)
-                                <li class=""><a href="{{ route('home') }}">Dashboard </a>
-                                </li>
-                            @endif
 						</ul>
 						<div class="nav-social-link">
                             <a href="https://www.facebook.com/Muhd.Halal/" target="_blank" class="btn-link"><i class="fa fa-facebook"></i></a>

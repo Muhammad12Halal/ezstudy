@@ -47,6 +47,9 @@ Route::group(['as' => 'e.'], function () {
     Route::get('/course', [FrontController::class, 'course'])->name('course');
     Route::get('/course/{id}', [FrontController::class, 'courseDetail'])->name('courseDetail');
     Route::get('/eventDetails', [FrontController::class, 'event'])->name('event');
+    Route::get('/faq', [FrontController::class, 'faq'])->name('faq');
+    Route::get('/about', [FrontController::class, 'about'])->name('about');
+    Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
 });
 
 
