@@ -107,7 +107,12 @@
                             <div class="course-buy-now text-center">
                                 @if (Auth::user() != NULL)
                                     @if (Auth::user()->level == 'User')
-                                        <a href="#" class="btn radius-xl text-uppercase">Enroll Now</a>
+                                        @if ($enrolls == 1)
+                                            <a href="" class="btn radius-xl text-uppercase">Done Enroll</a>
+                                        @endif
+                                        @if ($enrolls == 0)
+                                            <a href="{{ route('user.enroll.create', Request::segment(2)) }}" class="btn radius-xl text-uppercase">Enroll Now</a>
+                                        @endif
                                     @endif
                                     @if (Auth::user()->level != 'User')
                                         <a href="#" class="btn radius-xl text-uppercase">Cannot Enroll</a>
@@ -285,7 +290,7 @@
                                 @endif
                                 @if ($reviews == 1 && $enrolls == 1)
                                     <li>
-                                        <h5>f</h5>
+                                        <h5></h5>
                                     </li>
                                 @endif
 
@@ -301,76 +306,7 @@
                                                         <h5>Please Enroll For View Content</h5>
                                                     </li>
                                                 @endif
-                                                @if ($reviews == NULL && $enrolls == 1)
-                                                    <li>
-                                                        <form action="{{ route('admin.rating.store') }}" method="POST" enctype="multipart/form-data">
-                                                            @csrf
-                                                            <div class="row">
-                                                                <div class="col-lg-6">
-                                                                    <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
-                                                                </div>
-                                                                <div class="col-lg-6">
-                                                                    <input type="hidden" name="course_id" value="{{ $course->id }}">
-                                                                </div>
-                                                                <div class="col-lg-6">
-                                                                    <div class="form-group">
-                                                                        <label for="title">Rating:</label>
-                                                                        <br>
-                                                                        <div class="rating">
-                                                                            <label>
-                                                                            <input type="radio" name="rating" value="1" />
-                                                                            <span class="icon">★</span>
-                                                                            </label>
-                                                                            <label>
-                                                                            <input type="radio" name="rating" value="2" />
-                                                                            <span class="icon">★</span>
-                                                                            <span class="icon">★</span>
-                                                                            </label>
-                                                                            <label>
-                                                                            <input type="radio" name="rating" value="3" />
-                                                                            <span class="icon">★</span>
-                                                                            <span class="icon">★</span>
-                                                                            <span class="icon">★</span>
-                                                                            </label>
-                                                                            <label>
-                                                                            <input type="radio" name="rating" value="4" />
-                                                                            <span class="icon">★</span>
-                                                                            <span class="icon">★</span>
-                                                                            <span class="icon">★</span>
-                                                                            <span class="icon">★</span>
-                                                                            </label>
-                                                                            <label>
-                                                                            <input type="radio" name="rating" value="5" />
-                                                                            <span class="icon">★</span>
-                                                                            <span class="icon">★</span>
-                                                                            <span class="icon">★</span>
-                                                                            <span class="icon">★</span>
-                                                                            <span class="icon">★</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="form-group">
-                                                                        <label for="comment">Comment</label>
-                                                                        <textarea id="comment" name="comment" type="text" class="form-control editor1" required="required"></textarea>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                            <div class="offset-4 col-8">
-                                                                <button name="submit" type="submit" class="btn btn-success">Submit</button>
-                                                            </div>
-                                                            </div>
-                                                        </form>
-                                                    </li>
 
-                                                @endif
-                                                @if ($reviews == 1 && $enrolls == 1)
-                                                    <li>
-                                                        <h5>f</h5>
-                                                    </li>
-                                                @endif
                                             @endif
 
                                             @if (auth()->user()->level != 'User')
@@ -379,6 +315,151 @@
                                         @empty
 
                                         @endforelse
+                                    @endif
+                                @endif
+
+                                @if (auth()->user() != NULL)
+                                    @if (auth()->user()->level == 'User')
+                                        @if ($reviews == 0 && $enrolls == 1)
+                                            <li>
+                                                <form action="{{ route('user.rating.store') }}" method="POST" enctype="multipart/form-data">
+                                                    @csrf
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <input type="hidden" name="course_id" value="{{ $course->id }}">
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label for="title">Rating:</label>
+                                                                <br>
+                                                                <div class="rating">
+                                                                    <label>
+                                                                    <input type="radio" name="rating" value="1" />
+                                                                    <span class="icon">★</span>
+                                                                    </label>
+                                                                    <label>
+                                                                    <input type="radio" name="rating" value="2" />
+                                                                    <span class="icon">★</span>
+                                                                    <span class="icon">★</span>
+                                                                    </label>
+                                                                    <label>
+                                                                    <input type="radio" name="rating" value="3" />
+                                                                    <span class="icon">★</span>
+                                                                    <span class="icon">★</span>
+                                                                    <span class="icon">★</span>
+                                                                    </label>
+                                                                    <label>
+                                                                    <input type="radio" name="rating" value="4" />
+                                                                    <span class="icon">★</span>
+                                                                    <span class="icon">★</span>
+                                                                    <span class="icon">★</span>
+                                                                    <span class="icon">★</span>
+                                                                    </label>
+                                                                    <label>
+                                                                    <input type="radio" name="rating" value="5" />
+                                                                    <span class="icon">★</span>
+                                                                    <span class="icon">★</span>
+                                                                    <span class="icon">★</span>
+                                                                    <span class="icon">★</span>
+                                                                    <span class="icon">★</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="form-group">
+                                                                <label for="comment">Comment</label>
+                                                                <textarea id="comment" name="comment" type="text" class="form-control editor1" required="required"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                    <div class="offset-4 col-8">
+                                                        <button name="submit" type="submit" class="btn btn-success">Submit</button>
+                                                    </div>
+                                                    </div>
+                                                </form>
+                                            </li>
+                                        @endif
+                                        @if ($reviews == 1 && $enrolls == 1)
+                                            <li>
+                                                @if ($message = Session::get('success'))
+                                                    <div class="alert alert-success">
+                                                        <p>{{ $message }}</p>
+                                                    </div>
+                                                @endif
+                                                <li>
+                                                    <form action="{{ route('user.rating.update', $myreviews->id) }}" method="POST" enctype="multipart/form-data">
+                                                        @csrf
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <input type="hidden" name="course_id" value="{{ $course->id }}">
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label for="title">Rating:</label>
+                                                                    <br>
+                                                                    <div class="rating">
+                                                                        <label>
+                                                                        <input type="radio" name="rating" value="1" />
+                                                                        <span class="icon">★</span>
+                                                                        </label>
+                                                                        <label>
+                                                                        <input type="radio" name="rating" value="2" />
+                                                                        <span class="icon">★</span>
+                                                                        <span class="icon">★</span>
+                                                                        </label>
+                                                                        <label>
+                                                                        <input type="radio" name="rating" value="3" />
+                                                                        <span class="icon">★</span>
+                                                                        <span class="icon">★</span>
+                                                                        <span class="icon">★</span>
+                                                                        </label>
+                                                                        <label>
+                                                                        <input type="radio" name="rating" value="4" />
+                                                                        <span class="icon">★</span>
+                                                                        <span class="icon">★</span>
+                                                                        <span class="icon">★</span>
+                                                                        <span class="icon">★</span>
+                                                                        </label>
+                                                                        <label>
+                                                                        <input type="radio" name="rating" value="5" />
+                                                                        <span class="icon">★</span>
+                                                                        <span class="icon">★</span>
+                                                                        <span class="icon">★</span>
+                                                                        <span class="icon">★</span>
+                                                                        <span class="icon">★</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="form-group">
+                                                                    <label for="Old Review">Old Review: <b>{{ $myreviews->rating }}</b></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="form-group">
+                                                                    <label for="comment">Comment</label>
+                                                                    <textarea id="comment" name="comment" type="text" class="form-control editor1" required="required">{{ $myreviews->comment }}</textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                        <div class="offset-4 col-8">
+                                                            <button name="submit" type="submit" class="btn btn-success">Submit</button>
+                                                        </div>
+                                                        </div>
+                                                    </form>
+                                                </li>
+                                            </li>
+                                        @endif
                                     @endif
                                 @endif
                             </ul>

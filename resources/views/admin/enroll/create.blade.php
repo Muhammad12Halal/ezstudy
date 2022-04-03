@@ -11,7 +11,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title mb-0">Level Course Management</h4>
+                        <h4 class="card-title mb-0">Enroll Course Management</h4>
                         <div class="mt-3">
                             @if ($errors->any())
                             <div class="alert alert-danger">

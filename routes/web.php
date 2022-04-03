@@ -18,7 +18,9 @@ use App\Http\Controllers\Instructor\InstructorCourseController;
 use App\Http\Controllers\Instructor\InstructorLectureController;
 use App\Http\Controllers\Instructor\InstructorProfileController;
 use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\User\UserEnrollController;
 use App\Http\Controllers\User\UserProfileController;
+use App\Http\Controllers\User\UserRatingController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -228,6 +230,26 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'middleware' => 'User'], func
             Route::get('/edit/{id}', [UserProfileController::class, 'edit'])->name('edit');
             Route::post('/update/{id}', [UserProfileController::class, 'update'])->name('update');
             Route::get('/delete/{id}', [UserProfileController::class, 'destroy'])->name('destroy');
+        });
+
+        // User Enroll
+        Route::group(['prefix' => 'enroll', 'as' => 'enroll.'], function () {
+            Route::get('/', [UserEnrollController::class, 'index'])->name('index');
+            Route::get('{item}/create', [UserEnrollController::class, 'create'])->name('create');
+            Route::post('/store', [UserEnrollController::class, 'store'])->name('store');
+            Route::get('/edit/{id}', [UserEnrollController::class, 'edit'])->name('edit');
+            Route::post('/update/{id}', [UserEnrollController::class, 'update'])->name('update');
+            Route::get('/delete/{id}', [UserEnrollController::class, 'destroy'])->name('destroy');
+        });
+
+        // User Rating
+        Route::group(['prefix' => 'rating', 'as' => 'rating.'], function () {
+            Route::get('/', [UserRatingController::class, 'index'])->name('index');
+            Route::get('/create', [UserRatingController::class, 'create'])->name('create');
+            Route::post('/store', [UserRatingController::class, 'store'])->name('store');
+            Route::get('/edit/{id}', [UserRatingController::class, 'edit'])->name('edit');
+            Route::post('/update/{id}', [UserRatingController::class, 'update'])->name('update');
+            Route::get('/delete/{id}', [UserRatingController::class, 'destroy'])->name('destroy');
         });
 
 });

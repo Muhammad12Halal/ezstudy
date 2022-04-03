@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Course;
+use App\Models\CourseEnroll;
 use App\Models\CourseRating;
 use Illuminate\Http\Request;
 
-class UserRatingController extends Controller
+class UserEnrollController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +17,8 @@ class UserRatingController extends Controller
      */
     public function index()
     {
-        //
+        $courses = CourseEnroll::where('user_id', auth()->user()->id)->get();
+        return view('user.enroll', compact('courses'));
     }
 
     /**
@@ -23,9 +26,10 @@ class UserRatingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($item)
     {
-        //
+        $courses = Course::where('slug', $item)->first();
+        return view('user.newenroll', compact('courses'));
     }
 
     /**
@@ -37,20 +41,18 @@ class UserRatingController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'course_id' => 'required',
             'user_id' => 'required',
-            'rating' => 'required',
-            'comment' => 'required',
+            'course_id' => 'required',
+            'status' => 'required',
         ]);
 
-        $courseRating = new CourseRating();
-        $courseRating->course_id = $request->course_id;
-        $courseRating->user_id = $request->user_id;
-        $courseRating->rating = $request->rating;
-        $courseRating->comment = $request->comment;
-        $courseRating->save();
+        $enroll = new CourseEnroll();
+        $enroll->user_id = $request->user_id;
+        $enroll->course_id = $request->course_id;
+        $enroll->status = $request->status;
+        $enroll->save();
 
-        return redirect()->back()->with('success', 'Course Rating Created Successfully');
+        return redirect()->route('user.enroll.index')->with('success', 'Enroll created successfully.');
     }
 
     /**
@@ -84,21 +86,7 @@ class UserRatingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'course_id' => 'required',
-            'user_id' => 'required',
-            'rating' => 'required',
-            'comment' => 'required',
-        ]);
-
-        $courseRating = CourseRating::find($id);
-        $courseRating->course_id = $request->course_id;
-        $courseRating->user_id = $request->user_id;
-        $courseRating->rating = $request->rating;
-        $courseRating->comment = $request->comment;
-        $courseRating->save();
-
-        return redirect()->back()->with('success', 'Course Rating Updated Successfully');
+        //
     }
 
     /**

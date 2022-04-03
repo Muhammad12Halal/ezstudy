@@ -58,7 +58,7 @@
                         <b class="logo-icon ps-2">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="{{ asset('panel/assets/images/logo-icon.png') }}" alt="homepage" class="light-logo" />
+                            <img src="{{ asset('efront/STUDYA++.png') }}" width="150px" alt="homepage" class="light-logo" />
 
                         </b>
                         <!--End Logo icon -->
@@ -222,13 +222,13 @@
                         @if (Auth::user()->profiles != NULL)
                         <ul id="sidebarnav" class="pt-4">
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                    href="{{ route('instructor.dashboard.index') }}" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
+                                    href="{{ route('user.dashboard.index') }}" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
                                         class="hide-menu">Dashboard</span></a></li>
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="{{ route('user.dashboard.profile') }}" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
                                     class="hide-menu">Profile</span></a></li>
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="{{ route('instructor.course.index') }}" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
+                                href="{{ route('user.enroll.index') }}" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
                                     class="hide-menu">Course</span></a></li>
                         </ul>
                         @endif
@@ -271,8 +271,7 @@
             <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer text-center">
-                All Rights Reserved by Matrix-admin. Designed and Developed by <a
-                    href="https://www.wrappixel.com">WrapPixel</a>.
+                Copyright © 2022 EZ Study A++ by Muhammad Halal - All Rights Reserved.
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
