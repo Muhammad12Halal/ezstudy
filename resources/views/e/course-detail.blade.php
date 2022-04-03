@@ -253,7 +253,11 @@
                                             @forelse ($data->lectures as $detail)
                                                 <li>
                                                     <div class="curriculum-list-box">
-                                                        <span>Lecture {{ $loop->iteration }}: <br> TITLE: {{ $detail->title }} <br> DESC: {{ $detail->desc }} <br> LINK: <a href="{{ $detail->file }}" target="_blank">URL TO CONTENT</a></span>
+                                                        <span>Lecture {{ $loop->iteration }}: <br> TITLE: {{ $detail->title }} <br> DESC: {{ $detail->desc }}
+                                                            @if ($enrolls == 1)
+                                                                <br> LINK: <a href="{{ $detail->file }}" target="_blank">URL TO CONTENT</a>
+                                                            @endif
+                                                        </span>
                                                     </div>
                                                     <span>File Type: {{ Str::upper($detail->content) }}</span>
                                                 </li>
