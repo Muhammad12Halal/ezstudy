@@ -52,6 +52,7 @@ Route::group(['as' => 'e.'], function () {
     Route::get('/faq', [FrontController::class, 'faq'])->name('faq');
     Route::get('/about', [FrontController::class, 'about'])->name('about');
     Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
+    Route::post('/contact/post', [FrontController::class, 'contactpost'])->name('contactpost');
 });
 
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Contact;
 use App\Models\Course;
 use App\Models\CourseEnroll;
 use App\Models\CourseRating;
@@ -67,5 +68,22 @@ class FrontController extends Controller
     public function contact()
     {
         return view('e.contact');
+    }
+
+    public function contactpost(Request $request)
+    {
+        $request->validate([
+            'user_id' => 'required',
+            'message' => 'required',
+        ]);
+
+        $contact = new Contact();
+        $contact->user_id = $request->user_id;
+        $contact->message = $request->message;
+
+        $contact->save();
+
+        return redirect('/contact')->with('success', 'Message Sent Successfully');
+
     }
 }

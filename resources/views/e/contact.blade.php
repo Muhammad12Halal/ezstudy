@@ -52,8 +52,13 @@
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-7">
-                    <form class="contact-bx ajax-form" action="http://educhamp.themetrades.com/demo/assets/script/contact.php">
-                    <div class="ajax-message"></div>
+                    @if ($message = Session::get('success'))
+                        <div class="alert alert-success">
+                            <p>{{ $message }}</p>
+                        </div>
+                    @endif
+                    <form class="contact-bx" action="{{ route('e.contactpost') }}" method="POST">
+                    @csrf
                         <div class="heading-bx left">
                             <h2 class="title-head">Get In <span>Touch with Us</span></h2>
                             <p>Fill this form if you have any questions and problems:</p>
@@ -63,7 +68,7 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <label>Your Name</label>
-                                        <input name="name" id="name" type="text" required class="form-control valid-character">
+                                        <input name="name" id="name" type="text" value="{{ auth()->user()->name }}" required class="form-control valid-character" readonly>
                                     </div>
                                 </div>
                             </div>
@@ -71,23 +76,7 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <label>Your Email Address</label>
-                                        <input name="email" id="email" type="email" class="form-control" required >
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <label>Your Phone</label>
-                                        <input name="phone" id="phone" type="text" required class="form-control int-value">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <label>University</label>
-                                        <input name="uni" id="uni" type="text" required class="form-control">
+                                        <input name="email" id="email" type="email" value="{{ auth()->user()->email }}" class="form-control" required readonly>
                                     </div>
                                 </div>
                             </div>
@@ -95,7 +84,8 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <label>Type Message</label>
-                                        <textarea name="message" id="message" rows="4" class="form-control" required ></textarea>
+                                        <textarea name="message" id="message" rows="4" class="form-control" required></textarea>
+                                        <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
                                     </div>
                                 </div>
                             </div>
